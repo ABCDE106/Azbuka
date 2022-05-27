@@ -1,0 +1,65 @@
+package com.example.azbuka.presentation
+
+import androidx.compose.foundation.ScrollState
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.Button
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import com.example.azbuka.R
+import com.example.azbuka.components.LetterCard
+import com.example.azbuka.models.Letter
+
+@Composable
+fun AlphabetPage(navController: NavHostController) {
+    val listLetters = listOf<Letter>(
+        Letter("полностью", R.raw.all_sound),
+        Letter("а", R.raw.a_sound),
+        Letter("б", R.raw.b_sound),
+        Letter("в", R.raw.v_sound),
+        Letter("г", R.raw.g_sound),
+        Letter("д", R.raw.d_sound),
+        Letter("е", R.raw.e_sound),
+        Letter("ё", R.raw.gg_sound),
+        Letter("ж", R.raw.io_sound),
+        Letter("з", R.raw.z_sound),
+        Letter("и", R.raw.i_sound),
+        Letter("й", R.raw.ii_sound),
+        Letter("к", R.raw.k_sound),
+        Letter("л", R.raw.l_sound),
+        Letter("м", R.raw.m_sound),
+        Letter("н", R.raw.n_sound),
+        Letter("о", R.raw.o_sound),
+        Letter("п", R.raw.p_sound),
+        Letter("р", R.raw.r_sound),
+        Letter("с", R.raw.s_sound),
+        Letter("т", R.raw.t_sound),
+        Letter("у", R.raw.u_sound),
+        Letter("ф", R.raw.f_sound),
+        Letter("х", R.raw.h_sound),
+        Letter("ц", R.raw.c_sound),
+        Letter("ч", R.raw.ch_sound),
+        Letter("ш", R.raw.sh_sound),
+        Letter("щ", R.raw.shh_sound),
+        Letter("ъ", R.raw.tz_sound),
+        Letter("ы", R.raw.ei_sound),
+        Letter("ь", R.raw.mz_sound),
+        Letter("э", R.raw.eee_sound),
+        Letter("ю", R.raw.uu_sound),
+        Letter("я", R.raw.ya_sound),
+    )
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(ScrollState(1)),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally) {
+        for (letter in listLetters) {
+            LetterCard(letter = letter)
+        }
+    }
+}

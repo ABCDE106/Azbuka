@@ -18,7 +18,9 @@ fun MenuPage(navController: NavHostController) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
         Button(onClick = { navController.navigate("lesson_type") }) {
-            Text(text = "К урокам", fontWeight = FontWeight.Bold, fontSize = 22.sp)
+            Text(text = "К урокам",
+                fontWeight = FontWeight.Bold,
+                fontSize = 22.sp)
         }
     }
 }

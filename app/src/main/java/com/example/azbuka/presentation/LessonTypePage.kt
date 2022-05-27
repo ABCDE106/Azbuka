@@ -23,7 +23,7 @@ fun LessonTypePage(navController: NavHostController) {
         Button(onClick = { navController.navigate("consonants") }) {
             Text(text = "Согласные", fontWeight = FontWeight.Bold, fontSize = 22.sp)
         }
-        Button(onClick = { }) {
+        Button(onClick = { navController.navigate("alphabet") }) {
             Text(text = "Весь алфавит", fontWeight = FontWeight.Bold, fontSize = 22.sp)
         }
     }
